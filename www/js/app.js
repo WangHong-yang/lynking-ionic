@@ -66,22 +66,17 @@ nameApp.controller('CandidatesCtrl', function($scope, $http, $state, $ionicHisto
     method: 'GET',
     url: 'http://lynking-node.us-west-1.elasticbeanstalk.com/api/user/Aroshi%20Handa/match'
   }).then(function successCallback(response) {
-      // console.log(response);
-      // console.log(response.data[0].name);
-      console.log(response);
-      $scope.personsList = response.data;
-    }, function errorCallback(response) {
-      console.log("data not get")
-    });
+    // console.log(response);
+    // console.log(response.data[0].name);
+    console.log(response.data.users);
+    $scope.personsList = response.data.users;
+  }, function errorCallback(response) {
+    console.log("data not get")
+  });
   
-  // $scope.personsList = [{
-  //   "name": "Big man",
-  //   "job": "Developer, Google"
-  // },{
-  //   "name": "Bigger man",
-  //   "job": "VC, Citi"
-  // },{
-  //   "name": "Hubert",
-  //   "job": "student"
-  // }]; 
+  document.getElementById("yeah-btn").onclick = function() {
+    var redirectURL = document.getElementsByClassName("swiper-slide-active")[0].getElementsByTagName('a')[0].getAttribute("href");
+    window.location.href = redirectURL;
+  }
+
 });

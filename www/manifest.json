@@ -1,11 +1,11 @@
 {
-  "name": "My Ionic App",
-  "short_name": "My Ionic App",
+  "name": "LynKing",
+  "short_name": "LynKing",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
-    "src": "icon.png",
+    "src": "./img/favicon.jpg",
     "sizes": "512x512",
-    "type": "image/png"
+    "type": "image/jpg"
   }]
 }
